@@ -1,16 +1,18 @@
-import { z } from "zod"
+const { NODE_ENV, PORT } = process.env
 
-const env = z
-	.object({
-		NODE_ENV: z.string().optional(),
-		PORT: z.number().optional(),
-	})
-	.parse(process.env)
+const isProduction = NODE_ENV === "production"
+const port = (() => {
+	const portDefault = 3000
+	if (!PORT) return portDefault
 
-const isProduction = env.NODE_ENV === "production"
+	const portParsed = Number(PORT)
+	if (Number.isNaN(portParsed)) return portDefault
+
+	return portParsed
+})()
 
 export const config = {
-	port: env.PORT ?? 3000,
+	port,
 	isProduction,
 	isDev: !isProduction,
 }
