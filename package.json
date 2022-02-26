@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"start:be": "ts-node-dev --respawn --no-notify --transpile-only ./backend/index.ts",
-		"start:be:production": "NODE_ENV=production node build/backend/backend/index.js",
+		"start:be:production": "NODE_ENV=production node build/backend/index.js",
 		"start:fe": "cd frontend && next dev --port 3001",
 		"validate:tsc": "npm run validate:tsc:fe && npm run validate:tsc:be && npm run validate:tsc:shared",
 		"validate:tsc:be": "cd backend && tsc --noEmit",
