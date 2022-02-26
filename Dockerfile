@@ -10,7 +10,7 @@ COPY backend/ /app/backend/
 
 WORKDIR /app
 
-RUN npm ci --production
+RUN npm ci
 RUN npm run build
 
 # Run
