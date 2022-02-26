@@ -1,0 +1,36 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+	HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+jobs:
+  validate:
+    steps:
+      - name: Validate
+        uses: "./github/workflows/reusable-validate.yml"
+
+  heroku-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Login to Heroku
+        run: heroku container:login
+      - name: Build and push app
+        run: cd packages/app && heroku container:push --app help360 web
+
+  heroku-deploy-production:
+    needs: [validate, heroku-build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Login to Heroku
+        run: heroku container:login
+      - name: Release web app
+        run: heroku container:release --app help360 web

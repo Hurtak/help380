@@ -1,0 +1,11 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    steps:
+      - name: Validate
+        uses: "./github/workflows/reusable-validate.yml"
