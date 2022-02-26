@@ -11,7 +11,7 @@
 		"validate:eslint": "npm run validate:eslint:be && npm run validate:eslint:fe",
 		"validate:eslint:be": "cd backend && eslint --ignore-path=../.gitignore --ext=.ts .",
 		"validate:eslint:fe": "cd frontend && eslint --ignore-path=../.gitignore --ext=.ts,.tsx .",
-		"validate:prettier": "prettier --ignore-path .gitignore --check backend frontend migrations",
+		"validate:prettier": "prettier --ignore-path .gitignore --check backend frontend",
 		"validate": "npm run validate:tsc && npm run validate:eslint && npm run validate:prettier",
 		"build": "npm run build:be && npm run build:fe",
 		"build:be": "rm -rfv build/backend && cd backend && tsc",
