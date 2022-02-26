@@ -13,8 +13,8 @@
 		"validate:eslint:be": "cd backend && eslint --ignore-path=../.gitignore --ext=.ts .",
 		"validate:eslint:fe": "cd frontend && eslint --ignore-path=../.gitignore --ext=.ts,.tsx .",
 		"validate:eslint:shared": "cd shared && eslint --ignore-path=../.gitignore --ext=.ts .",
-		"validate:prettier": "prettier --ignore-path .gitignore --check backend frontend shared migrations example-data",
-		"validate": "npm run validate:tsc && npm run validate:eslint && npm run validate:test && npm run validate:prettier",
+		"validate:prettier": "prettier --ignore-path .gitignore --check backend frontend shared migrations",
+		"validate": "npm run validate:tsc && npm run validate:eslint && npm run validate:prettier",
 		"build": "npm run build:be && npm run build:fe",
 		"build:be": "rm -rfv build/backend && cd backend && tsc",
 		"build:fe": "rm -rfv build/frontend frontend/.next && cd frontend && NEXT_PUBLIC_PRODUCTION_BUILD=1 next build && next export -o ../build/frontend"

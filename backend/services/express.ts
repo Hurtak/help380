@@ -23,7 +23,7 @@ export const expressService = async ({
 	// Other Routes
 	//
 	app.use("/", express.static(path.join(__dirname, "../../../frontend")))
-	app.use("/api/hello", (req, res) => {
+	app.use("/api/hello", (_, res) => {
 		res.send("hello")
 	})
 
