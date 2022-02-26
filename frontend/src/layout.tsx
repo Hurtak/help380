@@ -4,7 +4,11 @@ import { FC } from "react"
 export const Layout: FC = ({ children }) => {
 	const styles = useStyles()
 
-	return <Container className={styles.classes.container}>{children}</Container>
+	return (
+		<Container size={400} className={styles.classes.container}>
+			{children}
+		</Container>
+	)
 }
 
 const useStyles = createStyles((theme) => ({
