@@ -11,6 +11,8 @@ env:
 jobs:
   validate:
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Validate
         uses: "./github/workflows/reusable-validate.yml"
 
