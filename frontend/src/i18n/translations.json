@@ -1,0 +1,22 @@
+{
+	"en": {
+		"translation": {
+			"index": {
+				"title": "Connections people in need with people that want to help",
+				"offerHelp": "Offer help",
+				"needHelp": "I need help",
+				"forOrganizations": "For organizations"
+			}
+		}
+	},
+	"cs": {
+		"translation": {
+			"index": {
+				"title": "Spojujeme pomocníky s potřebnými",
+				"offerHelp": "Nabízím pomoc",
+				"needHelp": "Potřebuju pomoc",
+				"forOrganizations": "Pro organizace"
+			}
+		}
+	}
+}
