@@ -1,0 +1,15 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"target": "ES2019",
+		"lib": [
+			"ES2019",
+			// DOM is so we can use URL and other globals on node (https://github.com/microsoft/TypeScript/issues/41727)
+			"DOM"
+		],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "../build/backend"
+	},
+	"include": ["./**/*.ts"]
+}

@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"target": "ES2019",
+		"lib": ["ES2019"],
+
+		"esModuleInterop": true,
+		"moduleResolution": "node"
+	}
+}
