@@ -1,9 +1,15 @@
+import { createGetInitialProps } from "@mantine/next"
 import Document, { Head, Html, Main, NextScript } from "next/document"
 import * as React from "react"
 
 import { config } from "../src/config"
 
+const getInitialProps = createGetInitialProps()
+
 export default class MyDocument extends Document {
+	// https://mantine.dev/theming/next/
+	static getInitialProps = getInitialProps
+
 	render() {
 		return (
 			<Html>

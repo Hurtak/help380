@@ -1,5 +1,5 @@
-import * as React from "react"
+import { Layout } from "../src/layout"
 
-const Index = () => <div>hello</div>
+const Index = () => <Layout>hello</Layout>
 
 export default Index
