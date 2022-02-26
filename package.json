@@ -1,5 +1,5 @@
 {
-	"name": "help123",
+	"name": "help380",
 	"version": "1.0.0",
 	"scripts": {
 		"start:be": "ts-node-dev --respawn --no-notify --transpile-only ./backend/index.ts",

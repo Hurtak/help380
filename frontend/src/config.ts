@@ -7,5 +7,5 @@ export const config = {
 
 	apiDomain: apiDomain,
 
-	title: "help123",
+	title: "help380",
 }
