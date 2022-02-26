@@ -1,16 +1,21 @@
+# Build
+
 FROM node:17 as build
 
 COPY package.json /app/
 COPY package-lock.json /app/
+COPY tsconfig.json /app/
 COPY frontend/ /app/frontend/
 COPY backend/ /app/backend/
 
 WORKDIR /app
 
-RUN npm ci
+RUN npm ci --production
 RUN npm run build
 
-FROM node:17-alpine as serve
+# Run
+
+FROM node:17-alpine as run
 
 COPY package.json /app/
 COPY package-lock.json /app/
