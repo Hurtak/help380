@@ -1,14 +1,14 @@
 name: Validate
 
 on:
-	push:
-	pull_request:
+  push:
+  pull_request:
 
 jobs:
-	validate:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Checkout repository
-				uses: actions/checkout@v2
-			- name: Validate
-				uses: "./github/workflows/reusable-validate.yml"
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Validate
+        uses: "./github/workflows/reusable-validate.yml"
