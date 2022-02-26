@@ -1,13 +1,20 @@
 # help380
 
+- https://help380.com
+
 ## Links
 
 - Figma designs https://www.figma.com/file/0F76PFtngFQbOLLB93Zg6G/
-- URL https://help380.com
-- URL internal https://help-380-xp6co.ondigitalocean.app
 
 ## Internal links for development
 
-- UI component library https://mantine.dev/
-- More complicated UI components https://www.radix-ui.com/
-- Hosting https://cloud.digitalocean.com/apps/e89432fb-2487-4ac7-adb8-b59de45a2a51/
+- Designs
+  - Figma https://www.figma.com/file/0F76PFtngFQbOLLB93Zg6G/
+- UI
+  - UI component library https://mantine.dev/
+  - More complicated UI components https://www.radix-ui.com/
+- Hosting
+  - URL https://help380.com/
+  - URL internal https://help380.herokuapp.com/
+  - Domain https://client.wedos.com/dns/primary-edit.html?id=1006804
+  - Heroku https://dashboard.heroku.com/apps/help380/
