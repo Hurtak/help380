@@ -31,7 +31,7 @@ jobs:
       - name: Login to Heroku
         run: heroku container:login
       - name: Build and push app
-        run: heroku container:push --app help360 web
+        run: heroku container:push --app help380 web
 
   heroku-deploy-production:
     needs: [validate, heroku-build]
@@ -42,4 +42,4 @@ jobs:
       - name: Login to Heroku
         run: heroku container:login
       - name: Release web app
-        run: heroku container:release --app help360 web
+        run: heroku container:release --app help380 web
