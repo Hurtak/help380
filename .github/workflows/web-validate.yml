@@ -2,18 +2,16 @@ name: Web validate
 
 on:
   push:
-    paths:
-      - ./web/**
   pull_request:
-    paths:
-      - ./web/**
+
+defaults:
+  run:
+    working-directory: ./web
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./web
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
