@@ -8,8 +8,6 @@ WORKDIR /src
 
 RUN npm ci
 RUN npm run build
-RUN ls -lah
-RUN tree
 
 # Run
 
