@@ -1,0 +1,45 @@
+{
+	"name": "help380-web",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "next",
+		"build": "next build",
+		"start:production": "next start",
+		"validate:tsc": "tsc --noEmit",
+		"validate:eslint": "eslint --ignore-path=.gitignore --ext=.ts,.tsx .",
+		"validate:prettier": "prettier --ignore-path .gitignore --check .",
+		"validate": "npm run validate:tsc && npm run validate:eslint && npm run validate:prettier"
+	},
+	"dependencies": {
+		"@mantine/core": "3.6.11",
+		"@mantine/hooks": "3.6.11",
+		"@mantine/next": "3.6.11",
+		"i18next": "21.6.12",
+		"next": "12.1.0",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-i18next": "11.15.5",
+		"zod": "3.12.0"
+	},
+	"devDependencies": {
+		"@types/cors": "2.8.12",
+		"@types/node": "^17.0.21",
+		"@types/react": "17.0.39",
+		"@typescript-eslint/eslint-plugin": "4.32.0",
+		"@typescript-eslint/parser": "4.32.0",
+		"eslint": "7.32.0",
+		"eslint-config-next": "12.1.0",
+		"eslint-config-prettier": "8.4.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-promise": "6.0.0",
+		"eslint-plugin-react": "7.29.2",
+		"eslint-plugin-react-hooks": "4.3.0",
+		"eslint-plugin-simple-import-sort": "7.0.0",
+		"prettier": "2.5.1",
+		"typescript": "4.4.3"
+	},
+	"engines": {
+		"node": ">= 16.0.0",
+		"npm": ">= 6.0.0"
+	}
+}

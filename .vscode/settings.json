@@ -4,15 +4,11 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"eslint.workingDirectories": [
 		{
-			"directory": "app",
+			"directory": "api",
 			"changeProcessCWD": true
 		},
 		{
-			"directory": "frontend",
-			"changeProcessCWD": true
-		},
-		{
-			"directory": "shared",
+			"directory": "web",
 			"changeProcessCWD": true
 		}
 	]

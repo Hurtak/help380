@@ -14,7 +14,7 @@ const languagesSwitch = [
 	{ value: languages.cs, label: <Language>🇨🇿 Česky</Language> },
 ]
 
-const Index = () => {
+const Index = (): JSX.Element => {
 	const { t, i18n } = useTranslation()
 	const [language, setLanguage] = useState(languages.en)
 

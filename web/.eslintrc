@@ -1,0 +1,35 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"env": {
+		"browser": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:promise/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"next",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:react/jsx-runtime",
+		"prettier"
+	],
+	"plugins": ["simple-import-sort", "@typescript-eslint"],
+	"rules": {
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
+		"@typescript-eslint/consistent-type-definitions": ["error", "type"]
+	},
+	"overrides": [
+		{
+			"files": ["pages/*.tsx"],
+			"rules": {
+				"no-restricted-syntax": ["off", { "selector": "ExportDefaultDeclaration" }]
+			}
+		}
+	]
+}

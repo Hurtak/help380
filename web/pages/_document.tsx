@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
 	// https://mantine.dev/theming/next/
 	static getInitialProps = getInitialProps
 
-	render() {
+	render(): JSX.Element {
 		return (
 			<Html>
 				<Head>
