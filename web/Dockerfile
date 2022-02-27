@@ -17,6 +17,7 @@ WORKDIR /src
 
 COPY package.json .
 COPY package-lock.json .
+COPY next.config.js .
 COPY --from=build /src/build ./build
 
 RUN npm ci --production
