@@ -21,4 +21,4 @@ COPY --from=build /src/build .
 
 RUN npm ci --production
 
-CMD npm run start:production
+CMD npm run start:production -- --port $PORT

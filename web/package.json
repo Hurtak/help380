@@ -4,7 +4,7 @@
 	"scripts": {
 		"start": "next",
 		"build": "next build",
-		"start:production": "next start",
+		"start:production": "NODE_ENV=production next start",
 		"validate:tsc": "tsc --noEmit",
 		"validate:eslint": "eslint --ignore-path=.gitignore --ext=.ts,.tsx .",
 		"validate:prettier": "prettier --ignore-path .gitignore --check .",

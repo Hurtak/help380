@@ -1,5 +1,3 @@
-name: Web validate
-
 on:
   push:
   pull_request:
