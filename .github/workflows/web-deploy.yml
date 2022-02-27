@@ -1,4 +1,4 @@
-name: Production
+name: Web deploy
 
 on:
   push:
