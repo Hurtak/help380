@@ -2,9 +2,9 @@
 
 FROM node:17 as build
 
-COPY . /src
-
 WORKDIR /src
+
+COPY . .
 
 RUN npm ci
 RUN npm run build
@@ -13,11 +13,11 @@ RUN npm run build
 
 FROM node:17-alpine as run
 
-COPY package.json /src
-COPY package-lock.json /src
-COPY --from=build /src/build/ /src/build/
-
 WORKDIR /src
+
+COPY package.json .
+COPY package-lock.json .
+COPY --from=build /src/build .
 
 RUN npm ci --production
 
