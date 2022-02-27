@@ -9,8 +9,8 @@ on:
       - web/**
 
 defaults:
-	run:
-		working-directory: ./web
+  run:
+    working-directory: ./web
 
 jobs:
   validate:
