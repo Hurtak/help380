@@ -15,7 +15,7 @@ FROM node:17-alpine as run
 
 COPY package.json /src
 COPY package-lock.json /src
-COPY --from=build /src/build /src/build
+COPY --from=build /src/build/ /src/build/
 
 WORKDIR /src
 
