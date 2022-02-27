@@ -17,10 +17,8 @@ WORKDIR /src
 
 COPY package.json .
 COPY package-lock.json .
-COPY --from=build /src/build .
+COPY --from=build /src/build ./build
 
 RUN npm ci --production
-RUN cat package.json
-RUN npm run
 
 CMD npm run start:production -- --port $PORT
