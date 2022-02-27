@@ -4,9 +4,15 @@ on:
   push:
     branches:
       - main
+    paths:
+      - web/**
 
 env:
   HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+defaults:
+	run:
+		working-directory: ./web
 
 jobs:
   validate:
