@@ -15,7 +15,7 @@ FROM node:17-alpine as run
 
 COPY package.json /app
 COPY package-lock.json /app
-COPY --from=build /app/.next /app/.next
+COPY --from=build /app/.next/ /app/.next/
 
 WORKDIR /app
 
