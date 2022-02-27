@@ -12,7 +12,7 @@ env:
 
 defaults:
   run:
-    working-directory: ./web
+    working-directory: web
 
 jobs:
   validate:
