@@ -2,22 +2,24 @@
 
 FROM node:17 as build
 
-COPY . /app
+COPY . /src
 
-WORKDIR /app
+WORKDIR /src
 
 RUN npm ci
 RUN npm run build
+RUN ls -lah
+RUN tree
 
 # Run
 
 FROM node:17-alpine as run
 
-COPY package.json /app
-COPY package-lock.json /app
-COPY --from=build /app/.next/ /app/.next/
+COPY package.json /src
+COPY package-lock.json /src
+COPY --from=build /src/.next /src/.next
 
-WORKDIR /app
+WORKDIR /src
 
 RUN npm ci --production
 
