@@ -20,5 +20,7 @@ COPY package-lock.json .
 COPY --from=build /src/build .
 
 RUN npm ci --production
+RUN cat package.json
+RUN npm run
 
 CMD npm run start:production -- --port $PORT

@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"scripts": {
 		"start": "next",
-		"build": "next build",
 		"start:production": "NODE_ENV=production next start",
+		"build": "next build",
 		"validate:tsc": "tsc --noEmit",
 		"validate:eslint": "eslint --ignore-path=.gitignore --ext=.ts,.tsx .",
 		"validate:prettier": "prettier --ignore-path .gitignore --check .",
