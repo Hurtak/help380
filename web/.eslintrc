@@ -21,15 +21,6 @@
 	"plugins": ["simple-import-sort", "@typescript-eslint"],
 	"rules": {
 		"simple-import-sort/imports": "error",
-		"simple-import-sort/exports": "error",
-		"@typescript-eslint/consistent-type-definitions": ["error", "type"]
-	},
-	"overrides": [
-		{
-			"files": ["pages/*.tsx"],
-			"rules": {
-				"no-restricted-syntax": ["off", { "selector": "ExportDefaultDeclaration" }]
-			}
-		}
-	]
+		"simple-import-sort/exports": "error"
+	}
 }
